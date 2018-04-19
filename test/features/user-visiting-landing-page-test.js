@@ -7,4 +7,11 @@ describe('user visits landing page', () => {
       assert.equal(browser.getText('#videos-container'), '');
     });
   });
+  describe('/videos/create', () => {
+    it('navigates to create page', () => {
+      browser.url('/');
+      browser.click('#add-video');
+      assert.include(browser.getText('body'), 'Save a Video');
+    });
+  });
 });

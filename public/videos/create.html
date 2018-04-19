@@ -12,8 +12,13 @@
         <img src="img/logo.svg" alt="">
       </div>
     </div>
-    <div id="videos-container" class="contents-container">
-    </div>
-    <a href="/videos/create" id="add-video">Save a Video</a>
+    <h1>Save a Video</h1>
+    <form action="/videos" method="post">
+      <label for="title">Video Title<label>
+      <input type="text" name="title" id="title-input">
+      <label for="description">Description</label>
+      <textarea type="text" name="description" id="description-input"></textarea>
+      <input type="submit" value="Submit" id="submit-button">
+    </form>
   </body>
 </html>
