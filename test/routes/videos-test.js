@@ -7,7 +7,7 @@ describe('server path /videos', () => {
     it('returns 201 status', async () => {
       const response = await request(app)
         .post('/videos')
-        .type('form');
+        // .type('form');
         assert.equal(response.status, 201);
     });
   });
