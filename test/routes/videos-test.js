@@ -1,6 +1,8 @@
 const {assert} = require('chai');
 const request = require('supertest');
 const app = require('../../app');
+const {mongoose, databaseUrl, options} = require('../../database');
+
 const {connectDatabase, disconnectDatabase} = require('../database-utilities');
 
 describe('server path /videos', () => {
