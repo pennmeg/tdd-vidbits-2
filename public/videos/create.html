@@ -13,12 +13,14 @@
       </div>
     </div>
     <h1>Save a Video</h1>
-    <form action="/videos" method="post">
-      <label for="title">Video Title<label>
+    <form id="save-video" action="/videos" method="post">
+      <label for="title">Video Title</label>
       <input type="text" name="title" id="title-input">
       <label for="description">Description</label>
       <textarea type="text" name="description" id="description-input"></textarea>
-      <input type="submit" value="Submit" id="submit-button">
+      <label for="videoUrl">Video Url</label>
+      <input id="videoUrl-input" name="videoUrl"/>
+      <button id="submit-button" type="submit"></button>
     </form>
   </body>
 </html>

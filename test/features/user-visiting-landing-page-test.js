@@ -1,5 +1,4 @@
 const {assert} = require('chai');
-
 describe('user visits landing page', () => {
   describe('no existing videos', () => {
     it('shows no videos', () => {

@@ -3,7 +3,7 @@ const express = require('express');
 const expressHandlebars = require('express-handlebars');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
-
+// Route Import
 const app = express();
 const videosRoute = require('./routes/videos');
 // View engine setup
@@ -16,6 +16,7 @@ if (process.env.NODE_ENV !== 'test') {
 }
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, 'public')));
+// Add new post route
 app.use('/', videosRoute);
 
 // Catch 404 and forward to error handler
