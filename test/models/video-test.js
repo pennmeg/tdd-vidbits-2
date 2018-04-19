@@ -14,3 +14,14 @@ module.exports = {
   connectDatabase,
   disconnectDatabase,
 }
+
+describe('Model: Video', () => {
+  describe('#Title', () => {
+    it('Should be a String', () => {
+      const titleAsInt = 123;
+      const video = new Video({ title: titleAsInt });
+
+      assert.strictEqual(video.title, titleAsInt.toString());
+    });
+  });
+});
